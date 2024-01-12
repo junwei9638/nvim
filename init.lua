@@ -1,4 +1,5 @@
 --[[
+--
 
 =====================================================================
 ==================== READ THIS BEFORE CONTINUING ====================
@@ -18,7 +19,7 @@ Kickstart.nvim is a template for your own configuration.
   - https://learnxinyminutes.com/docs/lua/
 
 
-  And then you can explore or search through `:help lua-guide`
+  And then h `:help lua-guide`
   - https://neovim.io/doc/user/lua-guide.html
 
 
@@ -94,68 +95,69 @@ require('lazy').setup({
       'folke/neodev.nvim',
     },
   },
-
-  {
-    "goolord/alpha-nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    event = "VimEnter",
-    config = function()
-    	local dashboard = require("alpha.themes.dashboard")
-
-      dashboard.section.header.val = {
-        [[                                                                                                 ]],
-        [[                                                                                                 ]],
-        [[                                                                                                 ]],
-        [[                                                                                                 ]],
-        [[      ___           ___           ___           ___                                    ___       ]],
-        [[     /__/\         /  /\         /__/\         /  /\          ___        ___          /__/\      ]],
-        [[     \  \:\       /  /::\        \  \:\       /  /::\        /__/\      /  /\        |  |::\     ]],
-        [[      \  \:\     /  /:/\:\        \  \:\     /  /:/\:\       \  \:\    /  /:/        |  |:|:\    ]],
-        [[  _____\__\:\   /  /:/~/::\   _____\__\:\   /  /:/  \:\       \  \:\  /__/::\      __|__|:|\:\   ]],
-        [[ /__/::::::::\ /__/:/ /:/\:\ /__/::::::::\ /__/:/ \__\:\  ___  \__\:\ \__\/\:\__  /__/::::| \:\  ]],
-        [[ \  \:\~~\~~\/ \  \:\/:/__\/ \  \:\~~\~~\/ \  \:\ /  /:/ /__/\ |  |:|    \  \:\/\ \  \:\~~\__\/  ]],
-        [[  \  \:\  ~~~   \  \::/       \  \:\  ~~~   \  \:\  /:/  \  \:\|  |:|     \__\::/  \  \:\        ]],
-        [[   \  \:\        \  \:\        \  \:\        \  \:\/:/    \  \:\__|:|     /__/:/    \  \:\       ]],
-        [[    \  \:\        \  \:\        \  \:\        \  \::/      \__\::::/      \__\/      \  \:\      ]],
-        [[     \__\/         \__\/         \__\/         \__\/           ~~~~                   \__\/      ]],
-        [[                                                                                                 ]],
-        [[                                                                                                 ]],
-        [[                                                                                                 ]],
-        [[                                                                                                 ]],
-        [[                                                                                                 ]],
-      }
-      dashboard.section.buttons.val = {
-        dashboard.button("n", " New file", ":ene <BAR> startinsert<CR>"),
-        dashboard.button("r", " Recent files", ":Telescope oldfiles<CR>"),
-        dashboard.button("f", " Find file", ":Telescope find_files<CR>"),
-        dashboard.button("p", " Find project", ":Telescope projects<CR>"),
-        dashboard.button("t", " Find text", ":Telescope live_grep<CR>"),
-        dashboard.button("u", " Update plugins", ":Lazy sync<CR>"),
-        dashboard.button("q", " Quit Neovim", ":qa<CR>"),
-      }
-
-      dashboard.section.footer.val = {
-        [[                              ]],
-        [[  As long as i open my terminal.]],
-        [[  It must be writing low-level PL.]],
-        [[                              ]],
-        [[                              ]],
-        [[                              ]],
-        [[                              ]],
-        [[                              ]],
-        [[                              ]],
-        [[                              ]],
-        [[                              ]],
-      }
-
-      dashboard.section.footer.opts.hl = "Type"
-      dashboard.section.header.opts.hl = "Include"
-      dashboard.section.buttons.opts.hl = "Keyword"
-
-      dashboard.opts.opts.noautocmd = true
-      require("alpha").setup(dashboard.opts)
-    end,
-  },
+  --
+  -- {
+  --   "goolord/alpha-nvim",
+  --   dependencies = { "nvim-tree/nvim-web-devicons" },
+  --   event = "VimEnter",
+  --   config = function()
+  --   	local dashboard = require("alpha.themes.dashboard")
+  --
+  --     dashboard.section.header.val = {
+  --       [[                                                                                                 ]],
+  --       [[                                                                                                 ]],
+  --       [[                                                                                                 ]],
+  --       [[                                                                                                 ]],
+  --       [[      ___           ___           ___           ___                                    ___       ]],
+  --       [[     /__/\         /  /\         /__/\         /  /\          ___        ___          /__/\      ]],
+  --       [[     \  \:\       /  /::\        \  \:\       /  /::\        /__/\      /  /\        |  |::\     ]],
+  --       [[      \  \:\     /  /:/\:\        \  \:\     /  /:/\:\       \  \:\    /  /:/        |  |:|:\    ]],
+  --       [[  _____\__\:\   /  /:/~/::\   _____\__\:\   /  /:/  \:\       \  \:\  /__/::\      __|__|:|\:\   ]],
+  --       [[ /__/::::::::\ /__/:/ /:/\:\ /__/::::::::\ /__/:/ \__\:\  ___  \__\:\ \__\/\:\__  /__/::::| \:\  ]],
+  --       [[ \  \:\~~\~~\/ \  \:\/:/__\/ \  \:\~~\~~\/ \  \:\ /  /:/ /__/\ |  |:|    \  \:\/\ \  \:\~~\__\/  ]],
+  --       [[  \  \:\  ~~~   \  \::/       \  \:\  ~~~   \  \:\  /:/  \  \:\|  |:|     \__\::/  \  \:\        ]],
+  --       [[   \  \:\        \  \:\        \  \:\        \  \:\/:/    \  \:\__|:|     /__/:/    \  \:\       ]],
+  --       [[    \  \:\        \  \:\        \  \:\        \  \::/      \__\::::/      \__\/      \  \:\      ]],
+  --       [[     \__\/         \__\/         \__\/         \__\/           ~~~~                   \__\/      ]],
+  --       [[                                                                                                 ]],
+  --       [[                                                                                                 ]],
+  --       [[                                                                                                 ]],
+  --       [[                                                                                                 ]],
+  --       [[                                                                                                 ]],
+  --     }
+  --
+  --     dashboard.section.buttons.val = {
+  --       dashboard.button("n", " New file", ":ene <BAR> startinsert<CR>"),
+  --       dashboard.button("r", " Recent files", ":Telescope oldfiles<CR>"),
+  --       dashboard.button("f", " Find file", ":Telescope find_files<CR>"),
+  --       dashboard.button("p", " Find project", ":Telescope projects<CR>"),
+  --       dashboard.button("t", " Find text", ":Telescope live_grep<CR>"),
+  --       dashboard.button("u", " Update plugins", ":Lazy sync<CR>"),
+  --       dashboard.button("q", " Quit Neovim", ":qa<CR>"),
+  --     }
+  --
+  --     dashboard.section.footer.val = {
+  --       [[                              ]],
+  --       [[  As long as i open my terminal.]],
+  --       [[  It must be writing low-level PL.]],
+  --       [[                              ]],
+  --       [[                              ]],
+  --       [[                              ]],
+  --       [[                              ]],
+  --       [[                              ]],
+  --       [[                              ]],
+  --       [[                              ]],
+  --       [[                              ]],
+  --     }
+  --
+  --     dashboard.section.footer.opts.hl = "Type"
+  --     dashboard.section.header.opts.hl = "Include"
+  --     dashboard.section.buttons.opts.hl = "Keyword"
+  --
+  --     dashboard.opts.opts.noautocmd = true
+  --     require("alpha").setup(dashboard.opts)
+  --   end,
+  -- },
 
   {
     -- Autocompletion
@@ -227,6 +229,7 @@ require('lazy').setup({
         end, { expr = true, buffer = bufnr, desc = 'Jump to previous hunk' })
       end,
     },
+
   },
 
 
@@ -362,18 +365,20 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 vim.keymap.set('n', 'dlc', ":%norm $x", { noremap = true, silent = true })
+vim.keymap.set('n', 'eol', 'G', { noremap = true, silent = true })
+vim.keymap.set('n', 'eof', 'G$', { noremap = true, silent = true })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
-vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = '*',
-})
-
+-- local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+-- vim.api.nvim_create_autocmd('TextYankPost', {
+--   callback = function()
+--     vim.highlight.on_yank()
+--   end,
+--   group = highlight_group,
+--   pattern = '*',
+-- })
+--
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
 require('telescope').setup {
@@ -681,3 +686,6 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+require("lazy")
+require("auto")
