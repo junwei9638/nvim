@@ -51,6 +51,7 @@ function M.config()
      [[                              ]],
      [[                              ]],
      [[                              ]],
+     -- nice footer.
    }
 
    dashboard.section.footer.opts.hl = "Type"
