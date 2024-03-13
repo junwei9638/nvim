@@ -1,10 +1,9 @@
-local M = {
-    "sainnhe/gruvbox-material",
-	  lazy = false,
-	  priority = 1000,
-}
+return {
+   "sainnhe/gruvbox-material",
+	lazy = false,
+	priority = 1000,
 
-function M.config()
+   config = function()
       vim.cmd([[
           let g:gruvbox_material_background = "medium"
           let g:gruvbox_material_foreground = "mix"
@@ -16,6 +15,5 @@ function M.config()
 
       vim.o.background = "dark"
       vim.cmd.colorscheme("gruvbox-material")
-end
-
-return M
+   end
+}
