@@ -22,8 +22,7 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
---
---  See `:help wincmd` for a list of all window commands
+-- See `:help wincmd` for a list of all window commands
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
@@ -36,3 +35,8 @@ vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set("n", "<leader>br", ":%s/\r//", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>eof", "G$", { noremap = true, silent = true })
+
+vim.keymap.set("v", "J", ":m .+1<CR>==", { noremap = true, silent = true, desc = "Move Line Down" })
+vim.keymap.set("v", "K", ":m .-2<CR>==", { noremap = true, silent = true, desc = "Move Line Up" })
+vim.keymap.set("n", "J", ":m .+1<CR>==", { noremap = true, silent = true, desc = "Move Line Down" })
+vim.keymap.set("n", "K", ":m .-2<CR>==", { noremap = true, silent = true, desc = "Move Line Up" })
